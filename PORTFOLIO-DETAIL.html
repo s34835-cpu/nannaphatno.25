@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดผลงาน - NANNAPHAT PORTFOLIO</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <h1 class="neon-text">เว็บไซต์ Portfolio</h1>
+        <p>เบื้องหลังการพัฒนาและรายละเอียดฟังก์ชันทั้งหมด</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" style="color: var(--neon-pink); text-shadow: 0 0 8px rgba(214, 0, 255, 0.5); text-decoration: none; display: inline-block; margin-bottom: 20px;">← กลับหน้าหลัก</a>
+
+        <section class="card">
+            <h2>📸 ภาพหน้าจอผลงาน (ทั้งหมด 6 รูป)</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 25px; width: 100%; box-sizing: border-box; justify-items: center;">
+                
+                <div style="text-align: center; width: 100%;">
+                    <img src=".............." alt="รูปผลงาน 1" style="width: 100%; height: auto; border-radius: 12px; border: 2px solid var(--neon-purple); box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);">
+                    <p style="font-size: 0.9rem; color: #888; margin-top: 8px; font-style: italic;">* ..................</p>
+                </div>
+
+                <div style="text-align: center; width: 100%;">
+                    <img src=".........." alt="รูปผลงาน 2" style="width: 100%; height: auto; border-radius: 12px; border: 2px solid var(--neon-purple); box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);">
+                    <p style="font-size: 0.9rem; color: #888; margin-top: 8px; font-style: italic;">* ..................."</p>
+                </div>
+
+                <div style="text-align: center; width: 100%;">
+                    <img src="............" alt="รูปผลงาน 3" style="width: 100%; height: auto; border-radius: 12px; border: 2px solid var(--neon-purple); box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);">
+                    <p style="font-size: 0.9rem; color: #888; margin-top: 8px; font-style: italic;">* .............................."</p>
+                </div>
+
+                <div style="text-align: center; width: 100%;">
+                    <img src="............" alt="รูปผลงาน 4" style="width: 100%; height: auto; border-radius: 12px; border: 2px solid var(--neon-purple); box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);">
+                    <p style="font-size: 0.9rem; color: #888; margin-top: 8px; font-style: italic;">* ................................</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>📝 รายละเอียดและฟังก์ชันการทำงาน</h2>
+            
+            <p style="line-height: 1.8; text-indent: 20px;">
+                โปรเจกต์นี้คือเว็บไซต์แฟ้มสะสมผลงานส่วนตัว ออกแบบด้วยสไตล์ Cyberpunk/Neon เน้นโทนสีมืดตัดด้วยแสงสะท้อนเรืองแสง พัฒนาขึ้นเพื่อจัดแสดงข้อมูลส่วนตัว ทักษะความสามารถ และรวบรวมลิงก์ช่องทางการติดต่อให้เข้าถึงได้ง่ายในที่เดียว
+            </p>
+
+            <h3 style="color: var(--neon-pink); text-shadow: 0 0 8px rgba(214, 0, 255, 0.4); margin-top: 25px;">🛠️ ฟีเจอร์เด่นของระบบ</h3>
+            <ul>
+                <li>รองรับ Responsive Design แสดงผลสวยงามทั้งบนคอมพิวเตอร์และมือถือ (ซ่อมแซมอาการรูปทะลุกรอบเรียบร้อย)</li>
+                <li>เอฟเฟกต์แสงนีออนวิ่งรอบขอบจอ และข้อความเรืองแสงวิ่งไล่เฉดสีม่วงชวนมอง</li>
+                <li>มีสคริปต์ JavaScript เปลี่ยนเฉดสีของพื้นหลังตามระดับการ Scroll หน้าจอ</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 NANNAPHAT. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (docHeight > 0) {
+                const scrollPercent = scrollTop / docHeight;
+                const hueValue = scrollPercent * 120;
+                document.body.style.setProperty('--scroll-hue', `${hueValue}deg`);
+            }
+        });
+    </script>
+</body>
+</html>
