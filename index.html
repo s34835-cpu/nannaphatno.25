@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANNAPHAT Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>สวัสดีค่ะ! หนูชื่อ <span class="neon-text">NANNAPHAT</span></h1>
+        <p>นี่คือผลงานและความภาคภูมิใจของหนู</p>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2>เกี่ยวกับหนู</h2>
+            <img src="F7103A56-EEE4-4817-B6E2-6D0ECC99D0CD.jpeg" width="30%">
+            <p>หนูเป็นนักเรียนที่สนใจด้านเทคโนโลยีและการพัฒนาเว็บไซต์ ชอบเรียนรู้สิ่งใหม่ ๆ และพัฒนาทักษะของตนเองอยู่เสมอ</p>
+        </section>
+
+        <section class="card">
+           <section class="card">
+            <h2>ผลงานของหนู</h2>
+            <a href="PORTFOLIO-DETAIL.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+                <div class="project-item">
+                    <h3 class="highlight">เว็บไซต์ Portfolio</h3>
+                    <p>เว็บไซต์สำหรับแสดงผลงานและข้อมูลส่วนตัว (คลิกเพื่อเข้าไปดูผลงานในแท็บใหม่)</p>
+                </div>
+            </a>
+
+            <a href="shop-detail.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+                <div class="project-item">
+                    <h3 class="highlight">เว็บไซต์ร้านค้าออนไลน์</h3>
+                    <p>เว็บไซต์สำหรับจำหน่ายสินค้าและรับคำสั่งซื้อ</p>
+                </div>
+            </a>
+
+            <a href="student-system-detail.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+                <div class="project-item">
+                    <h3 class="highlight">ระบบจัดการข้อมูลนักเรียน</h3>
+                    <p>ช่วยจัดเก็บและค้นหาข้อมูลนักเรียนได้สะดวก</p>
+                </div>
+            </a>
+        </section>
+            
+        <section class="card">
+            <h2>ทักษะ</h2>
+            <p>พูดภาษาญี่ปุ่นได้</p>
+            <p>มีความมุ่งมั่นในการทำงาน</p>
+            <p>เข้าสังคมเก่ง</p>
+            <p>ปรับตัวเข้ากับสถานะการณ์ต่างๆได้ไว</p>
+        </section>
+
+        <section class="card">
+            <h2>ติดต่อ</h2>
+            <p><strong>Email:</strong> <span class="highlight">s34595@banbung.ac.th</span></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 NANNAPHAT. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (docHeight > 0) {
+                const scrollPercent = scrollTop / docHeight;
+                const hueValue = scrollPercent * 120; // เปลี่ยนโทนสีพื้นหลังเวลา Scroll
+                document.body.style.setProperty('--scroll-hue', `${hueValue}deg`);
+            }
+        });
+    </script>
+</body>
+</html>
