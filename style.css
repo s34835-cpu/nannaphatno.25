@@ -1,0 +1,155 @@
+:root {
+    --scroll-hue: 0deg;
+    --neon-purple: #bd00ff;    /* สีม่วงนีออนหลัก */
+    --neon-pink: #d600ff;      /* สีชมพูอมม่วงสำหรับไล่เฉด */
+    --neon-dark-purple: #7a00ff; /* สีม่วงเข้มเพิ่มมิติ */
+    --bg-black: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #e0e0e0;
+    line-height: 1.6;
+    background-color: var(--bg-black) !important;
+    background-image: radial-gradient(circle at center, #000000 50%, hsl(calc(270 + var(--scroll-hue)), 70%, 5%) 100%);
+    background-attachment: fixed;
+    min-height: 120vh;
+    padding: 10px;
+}
+
+/* แสงขอบจอเรืองแสงโทนม่วงวิ่งสลับ */
+html {
+    background-color: #000;
+    box-shadow: inset 0 0 20px rgba(189, 0, 255, 0.4);
+    animation: borderGlowShift 8s linear infinite;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background: transparent;
+}
+
+/* อักษรเรืองแสงวิ่งไล่เฉดสีม่วงชวนมอง */
+.neon-text {
+    background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink), var(--neon-dark-purple), var(--neon-purple));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGlowRun 3s linear infinite;
+    font-weight: bold;
+    filter: drop-shadow(0 0 10px rgba(189, 0, 255, 0.6));
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+section.card {
+    background: rgba(15, 15, 20, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    word-wrap: break-word; /* ป้องกันข้อความยาวทะลุกรอบ */
+}
+
+section.card:hover {
+    border-color: rgba(189, 0, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(189, 0, 255, 0.15);
+}
+
+section.card h2 {
+    color: #f300ff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(243, 0, 255, 0.5);
+}
+
+/* ─── ส่วนรูปภาพโปรไฟล์ ─── */
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}
+
+.profile-img {
+    width: 140px;           
+    height: 140px;
+    border-radius: 50%;      
+    border: 3px solid var(--neon-purple);
+    box-shadow: 0 0 20px rgba(189, 0, 255, 0.5); 
+    object-fit: cover;       
+    transition: 0.5s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 30px var(--neon-purple);
+}
+
+.profile-text {
+    flex: 1;
+}
+
+/* รายการผลงาน */
+.project-item {
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 4px solid var(--neon-purple);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-item:hover {
+    background: rgba(189, 0, 255, 0.05);
+    transform: translateX(10px);
+}
+
+.highlight {
+    color: var(--neon-pink);
+    text-shadow: 0 0 8px rgba(214, 0, 255, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #444;
+}
+
+/* ระบบปรับแต่งหน้าจออัตโนมัติ (ช่วยแก้ไขไม่ให้วัตถุและรูปภาพหลุดขอบจอ) */
+@media (max-width: 768px) {
+    .profile-content {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    section.card {
+        padding: 20px;
+    }
+}
+
+/* ─── ส่วนแอนิเมชันเคลื่อนไหววิ่งได้ ─── */
+@keyframes textGlowRun {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+@keyframes borderGlowShift {
+    0%   { box-shadow: inset 0 0 20px rgba(189, 0, 255, 0.4); }
+    50%  { box-shadow: inset 0 0 20px rgba(255, 0, 128, 0.4); }
+    100% { box-shadow: inset 0 0 20px rgba(189, 0, 255, 0.4); }
+}
